@@ -1,33 +1,38 @@
-/**
- * Pessoa
- */
 public class Pessoa {
 
-    private int id;
-    private char nome;
-    private char endereco;
+    private Integer id;
+    private String nome;
+    private String endereco;
 
-    public int getId() {
+    public Pessoa () {}
+
+    public Pessoa(Integer id, String nome, String endereco) {
+        this.id = id;
+        this.nome = nome;
+        this.endereco = endereco;
+    }
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public char getNome() {
+    public String getNome() {
         return nome;
     }
 
-    public void setNome(char nome) {
+    public void setNome(String nome) {
         this.nome = nome;
     }
 
-    public char getEndereco() {
+    public String getEndereco() {
         return endereco;
     }
 
-    public void setEndereco(char endereco) {
+    public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
 }

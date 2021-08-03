@@ -5,7 +5,12 @@ public class ContaPoupanca extends Conta {
         return txCorrecao;
     }
 
-    public void setTxCorrecao(double txCorrecao) {
+    public void abrirConta(Pessoa cliente, Integer nrConta, double saldo, double txCorrecao) {
+        abrirConta(cliente, nrConta, saldo);
         this.txCorrecao = txCorrecao;
+    }
+
+    public void atualizaSaldoRendimento() {
+        depositar(getSaldo() * txCorrecao / 100);
     }
 }

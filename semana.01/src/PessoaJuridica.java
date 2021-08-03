@@ -1,20 +1,28 @@
 public class PessoaJuridica extends Pessoa {
-    private int cnpj;
-    private char atividade;
+    private Integer cnpj;
+    private String atividade;
 
-    public int getCnpj() {
+    public PessoaJuridica() { }
+
+    public PessoaJuridica(Integer id, String nome, String endereco, Integer cnpj, String atividade) {
+        super(id, nome, endereco);
+        this.cnpj = cnpj;
+        this.atividade = atividade;
+    }
+
+    public Integer getCnpj() {
         return cnpj;
     }
 
-    public void setCnpj(int cnpj) {
+    public void setCnpj(Integer cnpj) {
         this.cnpj = cnpj;
     }
 
-    public char getAtividade() {
+    public String getAtividade() {
         return atividade;
     }
 
-    public void setAtividade(char atividade) {
+    public void setAtividade(String atividade) {
         this.atividade = atividade;
     }
 }
