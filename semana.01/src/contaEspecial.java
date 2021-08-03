@@ -1,4 +1,4 @@
-public class contaEspecial extends Conta {
+public class ContaEspecial extends Conta {
     private double limite;
 
     public double getLimite() {
