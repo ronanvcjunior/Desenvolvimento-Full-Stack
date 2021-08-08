@@ -13,6 +13,11 @@ public class Quarto {
 
     public Quarto () {}
 
+    public Quarto(Integer idQuarto) {
+        this.idQuarto = idQuarto;
+        
+    }
+
     public Quarto(Hotel hotel, CategoriaQuarto categoriaQuarto, Integer qtdLeito, Integer nrQuarto, Double prDiaria) {
         this.hotel = hotel;
         this.categoriaQuarto = categoriaQuarto;
@@ -80,7 +85,7 @@ public class Quarto {
 
     @Override
     public String toString() {
-        return "Quarto [idQuarto=" + idQuarto + ", hotel=" + hotel + ", categoriaQuarto=" + categoriaQuarto
+        return "Quarto [idQuarto=" + idQuarto + ", idHotel=" + hotel.getIdHotel() + ", categoriaQuarto=" + categoriaQuarto
                 + ", qtdLeito=" + qtdLeito + ", nrQuarto=" + nrQuarto + ", prDiaria=" + prDiaria + "]";
     }
 }

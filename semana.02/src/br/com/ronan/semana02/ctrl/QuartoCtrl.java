@@ -33,25 +33,23 @@ public class QuartoCtrl {
     }
 
     public Quarto insert(Quarto quarto) {
-        Quarto retorno = new Quarto();
         try {
-            retorno = business.insert(quarto);
+            quarto = business.insert(quarto);
         } catch (QuartoException e) {
             System.err.println(e.getMessage());
         }
 
-        return retorno;
+        return quarto;
     }
 
     public Quarto update(Quarto quarto) {
-        Quarto retorno = new Quarto();
         try {
-            retorno = business.update(quarto);
+            quarto = business.update(quarto);
         } catch (QuartoException e) {
             System.err.println(e.getMessage());
         }
 
-        return retorno;
+        return quarto;
     }
 
     public void delete(Integer id) {

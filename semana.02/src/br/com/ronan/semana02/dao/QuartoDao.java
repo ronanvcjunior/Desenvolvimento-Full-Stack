@@ -58,8 +58,7 @@ public class QuartoDao {
         PreparedStatement st = null;
         ResultSet rs = null;
         try {
-            String sql = "SELECT id_quarto, id_hotel, categoria_quarto, qtd_leito, nr_quarto, preco_diaria FROM tb_quarto WHERE id_quarto = "
-                    + id;
+            String sql = "SELECT id_quarto, id_hotel, categoria_quarto, qtd_leito, nr_quarto, preco_diaria FROM tb_quarto WHERE id_quarto = " + id;
             st = conn.prepareStatement(sql);
             rs = st.executeQuery();
             while (rs.next()) {

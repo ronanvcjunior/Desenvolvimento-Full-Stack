@@ -1,6 +1,5 @@
 package br.com.ronan.semana02.exceptions;
 
-import java.lang.reflect.Constructor;
 
 public class DbException extends RuntimeException {
 
