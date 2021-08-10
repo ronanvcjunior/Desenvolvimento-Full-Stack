@@ -53,8 +53,9 @@ public class HotelDao {
         PreparedStatement st = null;
         ResultSet rs = null;
         try {
-            String sql = "SELECT id_hotel, nm_hotel, endereco, qtd_estrelas FROM db_hotel.tb_hotel WHERE id_hotel = " + id;
+            String sql = "SELECT id_hotel, nm_hotel, endereco, qtd_estrelas FROM db_hotel.tb_hotel WHERE id_hotel = ?";
             st = conn.prepareStatement(sql);
+            st.setInt(1, id);
             rs = st.executeQuery();
             while (rs.next()) {
                 retorno = new Hotel(
