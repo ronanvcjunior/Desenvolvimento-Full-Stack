@@ -13,7 +13,7 @@ import javax.persistence.Table;
 @Table(name = "tb_hotel")
 public class Hotel implements Serializable {
 
-    private static final long serialVersUID = 1L;
+    private static final long serialVersionUID = 1L;
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
